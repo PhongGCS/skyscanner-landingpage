@@ -2,8 +2,8 @@
   <header class="header js-header ">
     <div class="header__container container max-width-lg">
       <div class="header__logo">
-        <a href="#0">
-          <svg width="130" height="32" viewBox="0 0 130 32"><title>Go to homepage</title><circle fill="var(--color-primary)" cx="16" cy="16" r="16"/><rect fill="var(--color-contrast-higher)" x="41" y="11" width="89" height="10"/></svg>
+        <a href="/">
+          <img src="~/assets/img/site-logo.svg">
         </a>
       </div>
 
