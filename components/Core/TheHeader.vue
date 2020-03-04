@@ -3,7 +3,7 @@
     <div class="header__container container max-width-lg">
       <div class="header__logo">
         <a href="/">
-          <img src="~/assets/img/site-logo.svg">
+          <img src="~/assets/img/site-logo.svg" class="width-100%">
         </a>
       </div>
 
