@@ -31,7 +31,6 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    // '~/plugins/vue-notifications'
     { src: '~/plugins/initLibraries.js', mode: 'client' }
   ],
   /*
