@@ -1,6 +1,6 @@
-# skyscanner-landingpage
+# Skyscanner
 
-> My astonishing Nuxt.js project
+> this is skyscanner project from amlichonline
 
 ## Build Setup
 

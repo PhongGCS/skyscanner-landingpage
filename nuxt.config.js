@@ -1,5 +1,5 @@
 
-module.exports = {
+export default {
   mode: 'universal',
   /*
   ** Headers of the page
@@ -12,7 +12,8 @@ module.exports = {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto&display=swap' }
     ]
   },
   /*
@@ -23,18 +24,22 @@ module.exports = {
   ** Global CSS
   */
   css: [
-    'element-ui/lib/theme-chalk/index.css'
+    './node_modules/tiny-slider/dist/tiny-slider.css',
+    '~assets/css/main.scss'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/element-ui'
+    // '~/plugins/vue-notifications'
+    { src: '~/plugins/initLibraries.js', mode: 'client' }
   ],
   /*
   ** Nuxt.js dev-modules
   */
   buildModules: [
+    // Doc: https://github.com/nuxt-community/eslint-module
+    // '@nuxtjs/eslint-module'
   ],
   /*
   ** Nuxt.js modules
@@ -42,9 +47,7 @@ module.exports = {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
-    // Doc: https://github.com/nuxt-community/dotenv-module
-    '@nuxtjs/dotenv',
+    '@nuxtjs/style-resources'
   ],
   /*
   ** Axios module configuration
@@ -56,7 +59,6 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    transpile: [/^element-ui/],
     /*
     ** You can extend webpack config here
     */

@@ -1,0 +1,45 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @include breakpoint(lg) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.about-grid__item {
+  &:first-child {
+    grid-row: span 2;
+
+    h1 {
+      top: var(--space-xxxxl);
+      left: var(--space-md);
+      width: 60%;
+    }
+  }
+
+  &:nth-child(2) {
+    h1 {
+      position: absolute;
+      top: 64px;
+      right: 64px;
+    }
+
+    .text-component {
+      @include breakpoint(lg) {
+        padding-top: 200px !important;
+      }
+
+      @include breakpoint(xxl) {
+        padding-top: 300px !important;
+      }
+    }
+  }
+
+  &:last-child {
+    @include breakpoint(lg) {
+      grid-column: 1;
+      grid-row: 3;
+    }
+  }
+}

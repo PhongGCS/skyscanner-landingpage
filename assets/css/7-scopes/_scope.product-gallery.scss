@@ -1,0 +1,30 @@
+.product-gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid var(--color-contrast-lower);
+  border-right: 0;
+  border-bottom: 0;
+
+  > :first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  @include breakpoint(md) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.product-gallery__gridItem {
+  cursor: pointer;
+  border: 1px solid var(--color-contrast-lower);
+  border-top: 0;
+  border-left: 0;
+}
+
+.product-gallery__gridItemOverlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: alpha(var(--color-black), 0.6);
+}
